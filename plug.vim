@@ -1,75 +1,35 @@
-call plug#begin('~/.local/share/nvim/plugged')
+if has("nvim")
+  let g:plug_home = stdpath('data') . '/plugged'
+endif
 
-"themes
-Plug 'morhetz/gruvbox'
-Plug 'ayu-theme/ayu-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'kjwon15/vim-transparent'
-Plug 'AlessandroYorba/Despacio'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'mhartington/oceanic-next'
-Plug 'wojciechkepka/bogster'
-Plug 'franbach/miramare'
-Plug 'ntk148v/vim-horizon'
+call plug#begin()
 
-"visual
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
-Plug 'lilydjwg/colorizer'
-Plug 'leafgarland/typescript-vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdtree'
-Plug 'yggdroot/indentline'
-
-"Git integration
-Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'junegunn/gv.vim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
 
+if has("nvim")
+  Plug 'hoob3rt/lualine.nvim'
+  Plug 'kristijanhusak/defx-git'
+  Plug 'kristijanhusak/defx-icons'
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
+  Plug 'folke/lsp-colors.nvim'
+  Plug 'L3MON4D3/LuaSnip'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'onsails/lspkind-nvim'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'windwp/nvim-autopairs'
+endif
 
-"Functionality
-Plug 'preservim/tagbar'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'cespare/vim-toml'
-Plug 'mbbill/undotree'
-Plug 'puremourning/vimspector'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
-
-"tmux
-Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
-
-"code modification
-Plug 'scrooloose/nerdcommenter'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-" post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-
-Plug 'honza/vim-snippets'
-Plug 'sirver/ultisnips'
-Plug 'jiangmiao/auto-pairs'
-Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neovim/nvim-lspconfig'
-
-"----------------TSX---------------------------
-Plug 'ianks/vim-tsx'
-
-"--------------Style components---------------
-Plug 'styled-components/vim-styled-components'
-
-"------------- Format Code
-Plug 'sbdchd/neoformat'
+Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 call plug#end()
+
