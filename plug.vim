@@ -3,7 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "themes
 Plug 'ayu-theme/ayu-vim'
 Plug 'joshdick/onedark.vim'
-"Plug 'kjwon15/vim-transparent'
+Plug 'kjwon15/vim-transparent'
 Plug 'wojciechkepka/bogster'
 Plug 'ntk148v/vim-horizon'
 Plug 'markvincze/panda-vim'
@@ -46,7 +46,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "--------------Style components---------------
 Plug 'styled-components/vim-styled-components'
